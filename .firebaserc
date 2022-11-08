@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "plc-plan"
+  },
+  "targets": {
+    "plc-plan": {
+      "hosting": {
+        "plc-plan": [
+          "plc-plan"
+        ]
+      }
+    }
   }
 }
