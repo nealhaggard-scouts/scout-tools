@@ -7,9 +7,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/plc-plan",
         "index": "apps/plc-plan/src/index.html",
@@ -17,13 +15,8 @@
         "polyfills": "apps/plc-plan/src/polyfills.ts",
         "tsConfig": "apps/plc-plan/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/plc-plan/src/favicon.ico",
-          "apps/plc-plan/src/assets"
-        ],
-        "styles": [
-          "apps/plc-plan/src/styles.scss"
-        ],
+        "assets": ["apps/plc-plan/src/favicon.ico", "apps/plc-plan/src/assets"],
+        "styles": ["apps/plc-plan/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -78,19 +71,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/plc-plan/**/*.ts",
-          "apps/plc-plan/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/plc-plan/**/*.ts", "apps/plc-plan/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/plc-plan/jest.config.ts",
         "passWithNoTests": true
